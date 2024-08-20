@@ -19,7 +19,7 @@ This is a Next.js application that allows users to search for vehicle models by 
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/car-dealer-app.git
+   git clone https://github.com/gabrielbiscaia/car-dealer-app.git
    ```
 
 2. Navigate to the project directory:
@@ -78,5 +78,5 @@ npm start
 ### Home Page
 ![Car Dealer App main page](image-1.png)
 
-### VehicleS Filtered by Make and Year
+### Vehicles filtered by "Make" and "Year"
 ![Toyota Models for Year 2022](image.png)

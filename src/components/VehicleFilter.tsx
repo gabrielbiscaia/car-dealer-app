@@ -15,33 +15,34 @@ export default function VehicleFilter() {
   const [selectedYear, setSelectedYear] = useState("");
   const currentYear = new Date().getFullYear();
   const years = Array.from({ length: currentYear - 2014 }, (_, i) =>
-    (currentYear - i).toString()
+    (currentYear - i).toString(),
   );
 
   useEffect(() => {
     fetch(
-      "https://vpic.nhtsa.dot.gov/api/vehicles/GetMakesForVehicleType/car?format=json"
+      "https://vpic.nhtsa.dot.gov/api/vehicles/GetMakesForVehicleType/car?format=json",
     )
       .then((response) => response.json())
       .then((data) => setVehicleTypes(data.Results));
   }, []);
 
-  const isNextDisabled = !selectedType || !selectedYear;
+  const isSearchDisabled = !selectedType || !selectedYear;
 
   return (
     <div className="flex flex-row w-full h-full space-x-4">
       <div className="relative w-2/3">
-        <Image 
-          src={require("../assets/ferrari.jpeg")} 
-          alt="ferrari" 
-          
+        <Image
+          src={require("../assets/ferrari.jpeg")}
+          alt="ferrari"
           objectFit="fill"
           height={800}
         />
       </div>
       <div className="flex flex-col w-1/3 bg-white justify-center">
-        <div className="px-8 py-12 space-y-6">
-          <h2 className="text-center text-4xl py-2 border-b border-red-700 font-bold text-red-700">Search Cars</h2>
+        <div className="px-8 py-12 space-y-4">
+          <h2 className="text-center text-4xl py-2 border-b border-red-700 font-bold text-red-700">
+            Search Cars
+          </h2>
           <select
             value={selectedType}
             onChange={(e) => setSelectedType(e.target.value)}
@@ -67,14 +68,16 @@ export default function VehicleFilter() {
             ))}
           </select>
           <Link
-            href={isNextDisabled ? "#" : `/result/${selectedType}/${selectedYear}`}
+            href={
+              isSearchDisabled ? "#" : `/result/${selectedType}/${selectedYear}`
+            }
             className={`block w-full p-2 text-center text-white ${
-              isNextDisabled
+              isSearchDisabled
                 ? "bg-gray-900 cursor-not-allowed"
                 : "bg-red-700 hover:bg-red-500"
             }`}
           >
-            Next
+            {isSearchDisabled ? "Fill both fields" : "Search"}
           </Link>
         </div>
       </div>

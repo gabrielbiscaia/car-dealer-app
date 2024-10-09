@@ -1,8 +1,8 @@
 import { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import VehicleList from '@/app/components/VehicleList';
-import Loading from '@/app/components/Loading';
+import VehicleList from '@/components/VehicleList';
+import Loading from '@/components/Loading';
 
 type Params = {
   params: {

@@ -57,7 +57,7 @@ export default async function ResultPage({ params }: Params) {
             </h1>
             <Link
               href="/"
-              className="bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4 rounded"
+              className="bg-red-700 hover:bg-red-500 text-white font-bold py-2 px-4"
             >
               Back to Search
             </Link>

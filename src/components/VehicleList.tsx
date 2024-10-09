@@ -30,7 +30,7 @@ export default function VehicleList({ models }: VehicleListProps) {
       {models.map((model) => (
         <li
           key={model.Model_ID}
-          className="bg-white shadow rounded-lg p-4 hover:shadow-lg transition-shadow"
+          className="bg-white shadow  p-4 hover:shadow-lg transition-shadow"
         >
           <h2 className="text-xl font-semibold">
             <span className="border-b border-red-700">{model.Model_Name}</span>

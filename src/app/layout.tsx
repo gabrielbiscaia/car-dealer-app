@@ -5,8 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Car Dealer App",
-  description: "The app to find the car of your dreams",
+  title: "Gabriel Biscaia's Car Search",
 };
 
 export default function RootLayout({

@@ -21,8 +21,8 @@ Create a car search engine that will help you find the car you need.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/gabrielbiscaia/tic-tac-toe/.git
-   cd tic-tac-toe/
+   git clone https://github.com/gabrielbiscaia/car-search/.git
+   cd car-search/
    ```
 
 2. Install dependencies:
